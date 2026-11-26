@@ -1,0 +1,20 @@
+{
+char **ans=malloc(n*sizeof(char*));
+*returnSize=n;
+
+for(int i=1;i<=n;i++)
+{ 
+   ans[i-1]=malloc(9);
+
+if(i%15==0)
+strcpy(ans[i-1],"FizzBuzz");
+else if(i%3==0)
+strcpy(ans[i-1],"Fizz");
+else if(i%5==0)
+strcpy(ans[i-1],"Buzz");
+else
+sprintf(ans[i-1],"%d",i);
+
+}
+   return ans; 
+}
